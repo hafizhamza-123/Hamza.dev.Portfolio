@@ -13956,7 +13956,10 @@ strong {
   .navbar .mobile-theme-switch.theme-switcher-btn {
     width: 24px;
     height: 42px;
-    margin-right: -5px;
+    margin-right: 0;
+    position: absolute;
+    top: 20px;
+    right: 65px;
     padding: 0;
   }
   .navbar .mobile-theme-switch .theme-icon {
@@ -14007,6 +14010,11 @@ strong {
 .section-footer-2 .navigation a:hover {
   color: var(--tc-neutral-0);
   opacity: 1;
+}
+@media (max-width: 768px) {
+  .navbar .mobile-theme-switch.theme-switcher-btn {
+    right: 68px;
+  }
 }
 .section-footer-2 .social-links a,
 .section-footer-2 .social-links a:visited {
