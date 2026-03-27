@@ -20,7 +20,7 @@ export default function Skills2() {
 									</div>
 									<h3>My Skills</h3>
 								</div>
-								<div className="container mt-8">
+								<div className="container mt-5">
 									<div className="row">
 										<div className="col-lg-6">
 											<div className="row">
