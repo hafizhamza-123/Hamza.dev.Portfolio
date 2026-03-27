@@ -4,6 +4,10 @@ A production-ready personal portfolio built with Next.js App Router and TypeScri
 
 This project presents Muhammad Hamza Baig's profile, services, education and experience, featured projects, skills, and a working contact form with server-side email delivery.
 
+## Snapshot
+
+<img width="2560" height="2127" alt="snapshot" src="https://github.com/user-attachments/assets/c5640318-85ca-4a9e-9f45-a90a6c021f3a" />
+
 ## Highlights
 
 - Single-page portfolio flow with section-based navigation (`About`, `Resume`, `Services`, `Projects`, `Contact`)
