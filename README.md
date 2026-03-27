@@ -6,7 +6,11 @@ This project presents Muhammad Hamza Baig's profile, services, education and exp
 
 ## Snapshot
 
-<img width="2560" height="2127" alt="snapshot" src="https://github.com/user-attachments/assets/c5640318-85ca-4a9e-9f45-a90a6c021f3a" />
+<img width="2560" height="1649" alt="snapshot" src="https://github.com/user-attachments/assets/a4e72fa9-1020-43e5-953a-88cb03814549" />
+
+<img width="2542" height="1156" alt="snapshot1" src="https://github.com/user-attachments/assets/30a304f5-116a-4f45-bafc-33195e05934b" />
+
+<img width="2544" height="1476" alt="snapshot2" src="https://github.com/user-attachments/assets/698176ab-430e-42cd-9687-b79fa77e1d21" />
 
 ## Highlights
 
