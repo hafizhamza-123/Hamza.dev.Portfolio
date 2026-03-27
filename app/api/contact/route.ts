@@ -17,11 +17,13 @@ const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
 const MAX_FIELD_LENGTH = {
 	name: 80,
-	phone: 30,
+	phone: 16,
 	email: 120,
 	subject: 140,
 	message: 4000,
 };
+
+const E164_PHONE_REGEX = /^\+?[1-9]\d{7,14}$/;
 
 const rateLimitStore =
 	globalThis.__contactRateLimitStore ?? new Map<string, RateLimitEntry>();
@@ -70,6 +72,14 @@ function clearExpiredRateLimitEntries() {
 
 function isValidEmail(email: string) {
 	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function normalizePhone(phone: string) {
+	return phone.replace(/[\s().-]/g, "");
+}
+
+function isValidPhone(phone: string) {
+	return E164_PHONE_REGEX.test(phone);
 }
 
 function truncate(value: string, maxLength: number) {
@@ -238,7 +248,7 @@ export async function POST(request: NextRequest) {
 	}
 
 	const name = normalizeInput(formData.get("name"));
-	const phone = normalizeInput(formData.get("phone"));
+	const phone = normalizePhone(normalizeInput(formData.get("phone")));
 	const email = normalizeInput(formData.get("email"));
 	const subject = normalizeInput(formData.get("subject"));
 	const message = normalizeInput(formData.get("message"));
@@ -256,6 +266,7 @@ export async function POST(request: NextRequest) {
 		!subject ||
 		!message ||
 		!isValidEmail(email) ||
+		(phone.length > 0 && !isValidPhone(phone)) ||
 		hasInvalidLength
 	) {
 		return respondApi(request, "invalid", 400);

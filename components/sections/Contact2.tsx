@@ -9,6 +9,16 @@ type Contact2Props = {
 	status?: ContactStatus;
 };
 
+const E164_PHONE_REGEX = /^\+?[1-9]\d{7,14}$/;
+
+function normalizePhone(phone: string) {
+	return phone.replace(/[\s().-]/g, "");
+}
+
+function isValidPhone(phone: string) {
+	return E164_PHONE_REGEX.test(phone);
+}
+
 const statusMessage: Record<
 	ContactStatus,
 	{ text: string; className: string; style: CSSProperties }
@@ -64,6 +74,16 @@ export default function Contact2({ status }: Contact2Props) {
 
 		const form = event.currentTarget;
 		const body = new FormData(form);
+		const rawPhone = typeof body.get("phone") === "string" ? String(body.get("phone")) : "";
+		const normalizedPhone = normalizePhone(rawPhone);
+
+		if (normalizedPhone && !isValidPhone(normalizedPhone)) {
+			setSubmitStatus("invalid");
+			setIsSubmitting(false);
+			return;
+		}
+
+		body.set("phone", normalizedPhone);
 
 		try {
 			const response = await fetch("/api/contact", {
@@ -132,10 +152,13 @@ export default function Contact2({ status }: Contact2Props) {
 													className="form-control bg-3 border border-1 rounded-3"
 													id="phone"
 													name="phone"
-													placeholder="Phone"
+													placeholder="Phone (e.g. +923231234567)"
 													aria-label="phone"
 													autoComplete="tel"
-													maxLength={30}
+													inputMode="numeric"
+													pattern="\+?[1-9]\d{7,14}"
+													title="Use global format: optional +, then 8 to 15 digits."
+													maxLength={16}
 												/>
 											</div>
 											<div className="col-md-6">
