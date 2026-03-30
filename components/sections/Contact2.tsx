@@ -9,7 +9,7 @@ type Contact2Props = {
 	status?: ContactStatus;
 };
 
-const E164_PHONE_REGEX = /^\+?[1-9]\d{7,14}$/;
+const E164_PHONE_REGEX = /^(?:\+92|0)3[0-9]{9}$/;
 
 function normalizePhone(phone: string) {
 	return phone.replace(/[\s().-]/g, "");
@@ -191,11 +191,7 @@ export default function Contact2({ status }: Contact2Props) {
 													defaultValue={""}
 												/>
 											</div>
-											{turnstileSiteKey && (
-												<div className="col-12">
-													<div className="cf-turnstile" data-sitekey={turnstileSiteKey} />
-												</div>
-											)}
+											
 											<div className="position-absolute" style={{ left: "-9999px" }} aria-hidden="true">
 												<label htmlFor="website">Website</label>
 												<input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
