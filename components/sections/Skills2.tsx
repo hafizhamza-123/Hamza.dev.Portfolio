@@ -5,7 +5,6 @@ import Marquee from 'react-fast-marquee'
 export default function Skills2() {
 	return (
 		<>
-
 			<section id="skills" className="section-skills-2 pt-5">
 				<div className="container">
 					<div className="rounded-3 bg-3 border border-1 position-relative overflow-hidden">
