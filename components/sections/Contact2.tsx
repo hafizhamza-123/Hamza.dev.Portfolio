@@ -148,7 +148,7 @@ export default function Contact2({ status }: Contact2Props) {
 													aria-label="phone"
 													autoComplete="tel"
 													inputMode="numeric"
-													pattern="\+?[1-9]\d{7,14}"
+													pattern="\+?[0-9]\d{7,14}"
 													title="Use global format: optional +, then 8 to 15 digits."
 													maxLength={16}
 												/>
