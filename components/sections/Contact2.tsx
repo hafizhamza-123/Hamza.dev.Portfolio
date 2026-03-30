@@ -9,7 +9,7 @@ type Contact2Props = {
 	status?: ContactStatus;
 };
 
-const E164_PHONE_REGEX = /^(?:\+92|0)3[0-9]{9}$/;
+const E164_PHONE_REGEX = /^\+?[1-9]\d{7,14}$/;
 
 function normalizePhone(phone: string) {
 	return phone.replace(/[\s().-]/g, "");
