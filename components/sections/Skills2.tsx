@@ -64,6 +64,7 @@ export default function Skills2() {
 																</Link>
 																<span className="tool-tip">Tailwind</span>
 															</li>
+															
 														</ul>
 													</Marquee>
 												</div>
@@ -75,7 +76,7 @@ export default function Skills2() {
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
 																	<img src="assets/imgs/home-page-2/hero-1/supabasejpeg.svg" alt="brand" />
 																</Link>
-																<span className="tool-tip">Github</span>
+																<span className="tool-tip">Supabase</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
@@ -87,13 +88,19 @@ export default function Skills2() {
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
 																	<img src="assets/imgs/home-page-2/hero-1/icon-11.svg" alt="brand" />
 																</Link>
-																<span className="tool-tip">Git</span>
+																<span className="tool-tip">Github</span>
 															</li>
 															<li className="carouselTicker__item mt-6">
 																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
 																	<img src="assets/imgs/home-page-2/hero-1/Git-Icon-1788C.svg" alt="brand" />
 																</Link>
-																<span className="tool-tip">Tailwind</span>
+																<span className="tool-tip">Git</span>
+															</li>
+															<li className="carouselTicker__item mt-6">
+																<Link href="#" className="brand-logo icon_80 icon-shape rounded-3">
+																	<img src="assets/imgs/home-page-2/hero-1/socketio.svg" alt="brand" />
+																</Link>
+																<span className="tool-tip">Socket.IO</span>
 															</li>
 														</ul>
 													</Marquee>
@@ -114,7 +121,7 @@ export default function Skills2() {
 															<li className="mb-3">
 																<div className="d-flex flex-column flex-md-row gap-2">
 																	<p className="text-dark text-nowrap mb-0">Back-End:</p>
-																	<span className="text-300">Node.js, Express, Python, Django</span>
+																	<span className="text-300">Node.js, Express, WebSockets</span>
 																</div>
 															</li>
 															<li className="mb-3">

@@ -111,14 +111,6 @@ export default function Contact2({ status }: Contact2Props) {
 
 	return (
 		<>
-			{turnstileSiteKey && (
-				<Script
-					src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-					async
-					defer
-					strategy="afterInteractive"
-				/>
-			)}
 			<section id="contact" className="section-contact-2 position-relative pt-5 pb-60 overflow-hidden">
 				<div className="container position-relative z-1">
 					<div className="row align-items-center">
@@ -156,7 +148,7 @@ export default function Contact2({ status }: Contact2Props) {
 													aria-label="phone"
 													autoComplete="tel"
 													inputMode="numeric"
-													pattern="\+?[1-9]\d{7,14}"
+													pattern="\+?[0-9]\d{7,14}"
 													title="Use global format: optional +, then 8 to 15 digits."
 													maxLength={16}
 												/>
