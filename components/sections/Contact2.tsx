@@ -65,7 +65,6 @@ export default function Contact2({ status }: Contact2Props) {
 	const [submitStatus, setSubmitStatus] = useState<ContactStatus | undefined>(status);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const feedback = submitStatus ? statusMessage[submitStatus] : null;
-	const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 	async function handleSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
