@@ -1,10 +1,25 @@
 'use client'
 import Link from 'next/link'
+import type { MouseEvent } from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 	const closeMobileMenu = () => {
 		if (isMobileMenu) handleMobileMenu()
+	}
+
+	const handleNavItemClick = (sectionId: string) => (e: MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault()
+		closeMobileMenu()
+
+		const section = document.getElementById(sectionId)
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+			window.history.replaceState(null, '', `#${sectionId}`)
+			return
+		}
+
+		window.location.href = `/#${sectionId}`
 	}
 
 	return (
@@ -28,19 +43,19 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 								<nav>
 									<ul className="mobile-menu font-heading ps-0">
 										<li className="nav-item">
-											<Link className="nav-link" href="/#about" onClick={closeMobileMenu}>About me</Link>
+											<Link className="nav-link" href="#about" onClick={handleNavItemClick('about')}>About me</Link>
 										</li>
 										<li className="nav-item">
-											<Link className="nav-link" href="/#resume" onClick={closeMobileMenu}>Resume</Link>
+											<Link className="nav-link" href="#resume" onClick={handleNavItemClick('resume')}>Resume</Link>
 										</li>
 										<li className="nav-item">
-											<Link className="nav-link" href="/#projects" onClick={closeMobileMenu}>Projects</Link>
+											<Link className="nav-link" href="#projects" onClick={handleNavItemClick('projects')}>Projects</Link>
 										</li>
 										<li className="nav-item">
-											<Link className="nav-link" href="/#services" onClick={closeMobileMenu}>Services</Link>
+											<Link className="nav-link" href="#services" onClick={handleNavItemClick('services')}>Services</Link>
 										</li>
 										<li className="nav-item">
-											<Link className="nav-link" href="/#contact" onClick={closeMobileMenu}>Contact</Link>
+											<Link className="nav-link" href="#contact" onClick={handleNavItemClick('contact')}>Contact</Link>
 										</li>
 									</ul>
 								</nav>
