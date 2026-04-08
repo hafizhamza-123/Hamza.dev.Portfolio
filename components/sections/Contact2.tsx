@@ -228,9 +228,9 @@ export default function Contact2({ status }: Contact2Props) {
 								</div>
 								<div className="ps-3 h-100">
 									<span className="text-400 fs-6">Email</span>
-									<h6 className="mb-0">mhamza0254cs21@gmail.com</h6>
+									<h6 className="mb-0">mhamzabaig.dev@gmail.com</h6>
 								</div>
-								<a href="mailto:mhamza0254cs21@gmail.com" className="position-absolute top-0 start-0 w-100 h-100" />
+								<a href="mailto:mhamzabaig.dev@gmail.com" className="position-absolute top-0 start-0 w-100 h-100" />
 							</div>
 							<div className="d-flex align-items-center mb-3 position-relative d-inline-flex">
 								<div className="d-inline-block">
