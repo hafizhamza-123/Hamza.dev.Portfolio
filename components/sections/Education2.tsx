@@ -71,7 +71,7 @@ export default function Education2() {
 										<div className="rounded-3 border border-1 px-4 py-4 mt-4">
 											<div className="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
 												<p className="fw-extra-bold text-linear-4 mb-0">Dec 2025 - April 2026</p>
-												<span className="text-300 border border-1 rounded-pill px-3 py-1">Internship</span>
+												<span className="text-300 border border-1 rounded-pill px-3 py-1">Full Time</span>
 											</div>
 											<h5 className="mb-1">MERN Stack Developer</h5>
 											<p className="text-secondary-2 fw-semibold mb-3">SILICONWHIZ</p>
