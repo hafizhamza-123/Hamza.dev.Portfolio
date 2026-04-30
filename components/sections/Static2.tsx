@@ -51,7 +51,7 @@ export default function Static2() {
 										<div className="content mx-auto">
 											<i className="ri-award-line text-primary-2" />
 											<h2 className="text-300 my-0 fs-50">
-												<CountUp className="odometer text-dark fw-medium" enableScrollSpy={true} end={5} />
+												<CountUp className="odometer text-dark fw-medium" enableScrollSpy={true} end={10} />
 												<span className="fs-50 text-300 mb-0">+</span>
 											</h2>
 											<p className="fs-6 mb-0 text-dark">Certifications</p>
